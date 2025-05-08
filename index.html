@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Juegos de Matemática Mágica</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #f0f8ff;
+      padding: 20px;
+      text-align: center;
+    }
+    .question-box {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px solid #555;
+      border-radius: 12px;
+      max-width: 600px;
+      background-color: #fff8dc;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #message {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Juegos de Matemática Mágica ✨</h1>
+  <div class="question-box">
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <p id="message"></p>
+    <button onclick="nextQuestion()">Siguiente pregunta</button>
+  </div>
+
+  <script>
+    const quiz = [
+      {
+        q: "Auggie tiene 28 cromos y Jack Will le da 37. ¿Cuántos tiene ahora?",
+        options: [65, 55, 75],
+        answer: 65,
+        character: "Auggie"
+      },
+      {
+        q: "Annabeth encuentra 136 monedas y luego 84 más. ¿Cuántas tiene?",
+        options: [210, 220, 218],
+        answer: 220,
+        character: "Annabeth"
+      },
+      {
+        q: "Sadie Kane tenía 145 libros y Carter le presta 168 más. ¿Cuántos tiene ahora?",
+        options: [303, 313, 323],
+        answer: 313,
+        character: "Sadie"
+      },
+      {
+        q: "Ron tiene 52 ranas de chocolate y Hermione le da 19 más. ¿Cuántas tiene?",
+        options: [71, 61, 69],
+        answer: 71,
+        character: "Ron"
+      },
+      {
+        q: "Harry lanza 63 hechizos y Neville 48. ¿Cuántos en total?",
+        options: [111, 113, 109],
+        answer: 111,
+        character: "Harry"
+      },
+      {
+        q: "Percy tenía 120 dracmas y gastó 45. ¿Cuántos quedan?",
+        options: [75, 85, 95],
+        answer: 75,
+        character: "Percy"
+      },
+      {
+        q: "Via tenía 97 flores y usó 38. ¿Cuántas le quedan?",
+        options: [59, 61, 69],
+        answer: 59,
+        character: "Via"
+      },
+      {
+        q: "Carter tenía 213 papiros y perdió 79. ¿Cuántos quedan?",
+        options: [134, 144, 124],
+        answer: 134,
+        character: "Carter"
+      },
+      {
+        q: "Hermione tenía 80 puntos y Snape le quitó 25. ¿Cuántos quedan?",
+        options: [55, 50, 60],
+        answer: 55,
+        character: "Hermione"
+      },
+      {
+        q: "Leo construyó 65 robots y 18 se estropearon. ¿Cuántos funcionan?",
+        options: [47, 45, 43],
+        answer: 47,
+        character: "Leo"
+      },
+      {
+        q: "Auggie lee 6 libros al mes. ¿Cuántos en 4 meses?",
+        options: [24, 20, 26],
+        answer: 24,
+        character: "Auggie"
+      },
+      {
+        q: "Annabeth organiza 9 equipos con 7 semidioses cada uno. ¿Cuántos hay?",
+        options:
